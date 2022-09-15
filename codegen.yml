@@ -1,0 +1,18 @@
+overwrite: true
+schema: https://ENDPOINTURLGOESHERE.com
+documents: src/**/queries.gql
+generates:
+  src/gql/gen/codegen.ts:
+    config:
+      maybeValue: T | null | undefined
+      clientPath: ../apolloClient
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "graphql-codegen-svelte-apollo"
+  src/gql/gen/schema.json:
+    plugins:
+      - "introspection"
+hooks:
+  afterAllFileWrite:
+    - prettier --write

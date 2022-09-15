@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+    min-height: 101%;
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply font-sans antialiased leading-relaxed text-black;
+}

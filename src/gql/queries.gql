@@ -1,0 +1,11 @@
+query getQuery {
+  allQuery {
+    ...
+  }
+}
+
+query getQueryBySlug($slug: String) {
+  allQuery(where: { slug: { current: { eq: $slug } } }) {
+    ... 
+  }
+}
