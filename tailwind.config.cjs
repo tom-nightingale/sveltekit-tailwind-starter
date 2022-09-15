@@ -25,8 +25,8 @@ module.exports = {
         },
         secondary: {
           light: "#f83",
-          DEFAULT: "#d0dfe5",
-          dark: "#c0ced3",
+          DEFAULT: "#ff6a00",
+          dark: "#883900",
         },
       },
       maxWidth: (theme) => ({
