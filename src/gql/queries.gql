@@ -1,11 +1,20 @@
 query getQuery {
-  allQuery {
-    ...
+  launchesPast(limit: 10) {
+    mission_name
+    launch_date_local
+    launch_site {
+      site_name_long
+    }
+    ships {
+      name
+      home_port
+      image
+    }
   }
 }
 
-query getQueryBySlug($slug: String) {
-  allQuery(where: { slug: { current: { eq: $slug } } }) {
-    ... 
-  }
-}
+# query getQueryBySlug($slug: String) {
+#   allQuery(where: { slug: { current: { eq: $slug } } }) {
+#     ...
+#   }
+# }

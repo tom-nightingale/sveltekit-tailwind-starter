@@ -58,5 +58,6 @@
   },
   "type": "module",
   "dependencies": {
+    "graphql": "^16.6.0"
   }
 }

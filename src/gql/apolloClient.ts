@@ -2,12 +2,12 @@ import {
   ApolloClient,
   InMemoryCache,
   createHttpLink,
-  from,
+  from
 } from "@apollo/client";
 import fetch from "cross-fetch";
-import { onError } from "@apollo/client/link/error/error.cjs.js";
+import { onError } from "@apollo/client/link/error";
 
-const ENDPOINT = `https://ENDPOINTURLGOESHERE.com.`;
+const ENDPOINT = `https://api.spacex.land/graphql`;
 
 const httpLink = createHttpLink({
   uri: ENDPOINT,

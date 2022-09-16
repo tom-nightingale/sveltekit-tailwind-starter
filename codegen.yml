@@ -1,5 +1,5 @@
 overwrite: true
-schema: https://ENDPOINTURLGOESHERE.com
+schema: https://api.spacex.land/graphql/
 documents: src/**/queries.gql
 generates:
   src/gql/gen/codegen.ts:

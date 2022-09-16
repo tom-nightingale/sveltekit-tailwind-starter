@@ -13,7 +13,12 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		trailingSlash: "always",
+		prerender: {
+			enabled: true,
+			entries: ["*"],
+		},
 	}
 };
 
