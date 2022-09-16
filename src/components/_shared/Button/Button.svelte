@@ -13,13 +13,17 @@
 
 <style>
     .button {
-        @apply inline-block px-6 py-2 no-underline rounded-full bg-primary transition-all;
+        @apply inline-block px-6 py-2 no-underline rounded-full transition-all;
 
         &:disabled {
             @apply pointer-events-none opacity-50;
         }
+    }
 
-        &:not(:disabled) {
+    .primary {
+        @apply bg-primary;
+
+        &:not(:disabled):hover {
             @apply hover:bg-primary-dark text-white;
         }
     }
@@ -27,16 +31,17 @@
     .secondary {
         @apply bg-secondary text-white;
 
-        &:not(:disabled) {
+        &:not(:disabled):hover {
             @apply hover:bg-secondary-dark;
         }
-        
     }
 
-    .disabled {
-        @apply opacity-80 pointer-events-none;
-        pointer-events: none;
-        opacity: 0.8;
+    .tertiary {
+        @apply bg-white border-2 border-primary;
+
+        &:not(:disabled):hover {
+            @apply bg-primary
+        }
     }
 </style>
 

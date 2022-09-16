@@ -9,8 +9,7 @@
   argTypes={{
     label: { control: "text" },
     disabled: { control: "boolean" },
-    icon: { control: "text" },
-    iconLeft: { control: "boolean" },
+    theme: {control: "text"},
   }}
 />
 
@@ -18,4 +17,8 @@
   <Button {...args} />
 </Template>
 
-<Story name="Default" args={{ label: "Button" }} />
+<Story name="Primary" args={{ label: "Primary", disabled: false, theme: "primary" }} />
+
+<Story name="Secondary" args={{ label: "Secondary", disabled: false, theme: "secondary" }} />
+
+<Story name="Tertiary" args={{ label: "Tertiary", disabled: false, theme: "tertiary" }} />
