@@ -3,9 +3,10 @@ import {
   InMemoryCache,
   createHttpLink,
   from
-} from "@apollo/client";
+} from "@apollo/client/core/index.js";
 import fetch from "cross-fetch";
-import { onError } from "@apollo/client/link/error";
+import { onError } from "@apollo/client/link/error/error.cjs";
+
 
 const ENDPOINT = `https://api.spacex.land/graphql`;
 
