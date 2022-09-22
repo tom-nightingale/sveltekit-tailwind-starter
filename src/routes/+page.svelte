@@ -1,7 +1,8 @@
 <script lang="ts">
     import type { PageData } from "./$types";
     import Button from '../components/_shared/Button/Button.svelte'
-
+    
+    /** @type {import('./$types').PageData} */
     export let data: PageData;
     let launches = data.result.data.launchesPast;
 </script>
