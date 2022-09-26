@@ -13,6 +13,7 @@ const config = {
 	],
 
 	kit: {
+		inlineStyleThreshold: 1024, // used to inline styles in the <head> for anything less than 1MB.
 		adapter: adapter(),
 		trailingSlash: "always",
 		prerender: {
