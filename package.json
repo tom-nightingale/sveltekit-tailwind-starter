@@ -58,6 +58,7 @@
   },
   "type": "module",
   "dependencies": {
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "motion": "^10.14.2"
   }
 }
