@@ -17,5 +17,17 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": false
-  }
+  },
+  "env": config => ({
+    ...config,
+    SSR: true,
+  }),
+  async viteFinal(config, { configType }) {
+    config.resolve.alias = {
+      // ./.svelte-kit/runtime/app no longer exists
+      ...config.resolve.alias,
+      $app: path.resolve("./.storybook/mocks"),
+    };
+    return config;
+  },
 }
