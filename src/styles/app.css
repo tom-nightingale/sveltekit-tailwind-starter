@@ -11,3 +11,9 @@ html {
 body {
     @apply font-sans antialiased leading-relaxed text-black;
 }
+
+.prose {
+    p {
+        @apply mb-4;
+    }
+}
