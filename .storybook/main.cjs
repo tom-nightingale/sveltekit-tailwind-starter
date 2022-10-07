@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -27,6 +29,8 @@ module.exports = {
       // ./.svelte-kit/runtime/app no longer exists
       ...config.resolve.alias,
       $app: path.resolve("./.storybook/mocks"),
+      "@/components": path.resolve(__dirname, "../src/components"),
+      "@/utils": path.resolve(__dirname, "../src/utils"),
     };
     return config;
   },

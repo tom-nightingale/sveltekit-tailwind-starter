@@ -1,7 +1,7 @@
 <script>
   import "../styles/app.css";
-  import Container from "../components/_shared/Container/Container.svelte";
-  import PageTransition from "../components/_shared/PageTransition/PageTransition.svelte";
+  import Container from "@/components/_shared/Container/Container.svelte";
+  import PageTransition from "@/components/_shared/PageTransition/PageTransition.svelte";
 
   export let data;
 </script>

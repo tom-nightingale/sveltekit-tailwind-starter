@@ -1,61 +1,30 @@
 <script lang="ts">
   export let component: string = "h1";
-  export let classes: string = "";
+  export let modifiers: string = "";
 </script>
 
-<style>
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold;
-  }
-
-  h1,
-  .h1 {
-    @apply text-5xl;
-  }
-  h2 {
-    @apply text-4xl;
-  }
-  h3 {
-    @apply text-3xl;
-  }
-  h4 {
-    @apply text-2xl;
-  }
-  h5 {
-    @apply text-xl;
-  }
-  h6 {
-    @apply text-lg;
-  }
-</style>
-
 {#if component === "h1"}
-  <h1 class="h1">
+  <h1 class="font-bold text-5xl {modifiers}">
     <slot />
   </h1>
 {:else if component === "h2"}
-  <h2 class={classes} {...$$props}>
+  <h2 class="font-bold text-4xl {modifiers}" {...$$props}>
     <slot />
   </h2>
 {:else if component === "h3"}
-  <h3 class={classes} {...$$props}>
+  <h3 class="font-bold text-3xl {modifiers}" {...$$props}>
     <slot />
   </h3>
 {:else if component === "h4"}
-  <h4 class={classes} {...$$props}>
+  <h4 class="font-bold text-2xl {modifiers}" {...$$props}>
     <slot />
   </h4>
 {:else if component === "h5"}
-  <h5 class={classes} {...$$props}>
+  <h5 class="font-bold text-xl {modifiers}" {...$$props}>
     <slot />
   </h5>
 {:else if component === "h6"}
-  <h6 class={classes} {...$$props}>
+  <h6 class="text-lg font-bold  {modifiers}" {...$$props}>
     <slot />
   </h6>
 {/if}

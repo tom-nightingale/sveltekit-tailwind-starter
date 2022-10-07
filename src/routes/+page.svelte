@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import Container from "../components/_shared/Container/Container.svelte";
-  import Heading from "../components/_shared/Heading/Heading.svelte";
+  import Container from "@/components/_shared/Container/Container.svelte";
+  import Heading from "@/components/_shared/Heading/Heading.svelte";
 
   /** @type {import('./$types').PageData} */
   export let data: PageData;
@@ -9,7 +9,7 @@
 </script>
 
 <Container>
-  <Heading component="h1">Welcome to sveltekit</Heading>
+  <Heading component="h1" modifiers="">Welcome to sveltekit</Heading>
   <p>
     Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
   </p>
@@ -17,7 +17,7 @@
 
 <div class="bg-slate-900 pt-10 mt-10">
   <Container>
-    <Heading component="h2" classes="text-white">SpaceX launches</Heading>
+    <Heading component="h2">SpaceX launches</Heading>
     {#if data}
       <ul class="grid grid-cols-4 gap-4 md:gap-12 py-8">
         {#each launches as mission}
