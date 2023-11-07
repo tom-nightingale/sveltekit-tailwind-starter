@@ -1,38 +1,38 @@
-# create-svelte
+# Sveltekit | Storybook | TailwindCSS | Apollo GraphQL | Starter Kit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Sveltekit, Storybook, TailwindCSS and Apollo GraphQL starter.
 
-## Creating a project
+- [Sveltekit](https://kit.svelte.dev/)
+- [TailwindCSS](https://tailwindcss.com/docs/installation)
+- [Apollo Client](https://www.npmjs.com/package/@apollo/client) for GraphQL queries across any endpoint
+- [Typescript code generator](https://www.npmjs.com/package/@graphql-codegen/cli) to automatically generate Types from your endpoint
+- [Storybook](https://storybook.js.org/) Frontend workshop
 
-If you're seeing this, you've probably already done this step. Congrats!
+# Sveltekit Starter
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Demo: [https://sveltekit-tailwind-starter.vercel.app/](https://sveltekit-tailwind-starter.vercel.app/)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+A simple [Sveltekit](https://kit.svelte.dev/) boilerplate with [TailwindCSS](https://tailwindcss.com/) ([JIT](https://tailwindcss.com/docs/just-in-time-mode)), [Storybook](https://storybook.js.org/) , and a few other nice bits preconfigured.
 
-## Developing
+## 🚀 Quick start
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1.  **Clone the repo**
 
-```bash
-npm run dev
+    ```sh
+    git clone https://github.com/tom-nightingale/sveltekit-tailwind-starter
+    ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+2.  **Start developing**
 
-## Building
+    Navigate into your new site’s directory and install the local dependencies first, then run the dev command.
 
-To create a production version of your app:
+    ```sh
+    cd sveltekit-starter/
 
-```bash
-npm run build
-```
+    npm i
+    npm run dev
+    ```
 
-You can preview the production build with `npm run preview`.
+3.  **Open the source code and start editing!**
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+    Your site is will be running at `http://localhost:3000`
