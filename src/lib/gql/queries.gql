@@ -1,0 +1,55 @@
+fragment imageHotspot on SanityImageHotspot {
+  x
+  y
+  width
+  height
+}
+
+fragment imageCrop on SanityImageCrop {
+  top
+  bottom
+  left
+  right
+}
+
+fragment seo on Seo {
+  metaTitle
+  metaDesc
+  keywords
+  shareGraphic {
+    asset {
+      url
+    }
+  }
+}
+
+query GetHome {
+  allHome {
+    heroImage {
+      asset {
+        url
+        altText
+      }
+      hotspot {
+        ...imageHotspot
+      }
+      crop {
+        ...imageCrop
+      }
+    }
+    sections {
+      images {
+        asset {
+          url
+          altText
+        }
+        hotspot {
+          ...imageHotspot
+        }
+        crop {
+          ...imageCrop
+        }
+      }
+    }
+  }
+}

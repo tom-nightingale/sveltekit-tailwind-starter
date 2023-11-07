@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  height: 101%;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-serif antialiased leading-relaxed text-black;
+}
+
+a {
+  @apply transition-all duration-200;
+}

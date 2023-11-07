@@ -1,8 +1,8 @@
 overwrite: true
-schema: https://api.spacex.land/graphql/
+schema: https://2ji46l47.api.sanity.io/v1/graphql/production/default
 documents: src/**/queries.gql
 generates:
-  src/gql/gen/codegen.ts:
+  src/lib/gql/gen/codegen.ts:
     config:
       maybeValue: T | null | undefined
       clientPath: ../apolloClient
@@ -10,7 +10,7 @@ generates:
       - "typescript"
       - "typescript-operations"
       - "graphql-codegen-svelte-apollo"
-  src/gql/gen/schema.json:
+  src/lib/gql/gen/schema.json:
     plugins:
       - "introspection"
 hooks:

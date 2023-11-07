@@ -1,14 +1,18 @@
-import client from "../gql/apolloClient";
-import type {GetQueryQuery} from '../gql/gen/codegen'
-import { GetQueryDoc } from '../gql/gen/codegen'
+// import { error } from "@sveltejs/kit";
+// import client from "$lib/gql/apolloClient";
+// import type { GetHomeQuery } from "$lib/gql/gen/codegen";
+// import { GetHomeDoc } from "$lib/gql/gen/codegen";
 
+// export async function load() {
+//   const data = await client.query<GetHomeQuery>({
+//     query: GetHomeDoc,
+//   });
 
-export async function load() {
-  const data = await client.query<GetQueryQuery>({
-    query: GetQueryDoc,
-  });
+//   if (data?.data?.allHome?.length < 1) {
+//     throw error(404, "Not found");
+//   }
 
-  return {
-    result: data,
-  };
-}
+//   return {
+//     data: data.data.allHome[0],
+//   };
+// }
