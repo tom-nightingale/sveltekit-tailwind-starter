@@ -1,5 +1,5 @@
 overwrite: true
-schema: https://2ji46l47.api.sanity.io/v1/graphql/production/default
+schema: https://<PROJECTID>.api.sanity.io/v1/graphql/production/default
 documents: src/**/queries.gql
 generates:
   src/lib/gql/gen/codegen.ts:

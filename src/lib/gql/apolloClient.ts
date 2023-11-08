@@ -7,8 +7,8 @@ import {
 import fetch from "cross-fetch";
 import { onError } from "@apollo/client/link/error/error.cjs";
 
-// const ENDPOINT = `https://2ji46l47.api.sanity.io/v1/graphql/production/default`;
-const ENDPOINT = `https://2ji46l47.apicdn.sanity.io/v1/graphql/production/default`;
+// const ENDPOINT = `https://<PROJECTID>.api.sanity.io/v1/graphql/production/default`;
+const ENDPOINT = `https://<PROJECTID>.apicdn.sanity.io/v1/graphql/production/default`;
 
 const httpLink = createHttpLink({
   uri: ENDPOINT,
@@ -37,11 +37,11 @@ const isServer = typeof window === "undefined";
  */
 const ssrOptions = {
   watchQuery: {
-    fetchPolicy: "no-cache",
+    fetchPolicy: "cache-and-network",
     errorPolicy: "ignore",
   },
   query: {
-    fetchPolicy: "no-cache",
+    fetchPolicy: "cache-and-network",
     errorPolicy: "all",
   },
 };
