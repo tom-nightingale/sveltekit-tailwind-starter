@@ -1,5 +1,5 @@
 {
-  "name": "cbarch-frontend",
+  "name": "sveltekit-tailwind-starter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -37,7 +37,6 @@
     "@storybook/testing-library": "^0.2.0",
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.20.4",
-    "@thisissoon/mox": "file:../../soon/mox-tailwind/package",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "autoprefixer": "^10.4.14",

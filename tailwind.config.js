@@ -13,7 +13,7 @@ export default {
       "4xl": "2000px",
     },
     fontFamily: {
-      sans: ["Montserrat", "arial", "sans-serif"],
+      sans: ["Inter", "arial", "sans-serif"],
       serif: ["Palatino Linotype", "serif"],
     },
     extend: {
@@ -22,16 +22,19 @@ export default {
           DEFAULT: "#ffffff",
         },
         "on-background": {
-          DEFAULT: "#FF0000",
+          DEFAULT: "#000000",
         },
         surface: {
           DEFAULT: "#ffffff",
         },
         "on-surface": {
-          DEFAULT: "#FF0000",
+          DEFAULT: "#000000",
         },
         "inverse-surface": {
-          DEFAULT: "#fff",
+          DEFAULT: "#000000",
+        },
+        "inverse-on-surface": {
+          DEFAULT: "#ffffff",
         },
         "surface-variant": {
           DEFAULT: "#f2f0e8",

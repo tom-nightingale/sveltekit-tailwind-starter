@@ -8,6 +8,8 @@
   export let newTab = false;
   export let label = "";
   export let theme = "primary";
+  export let variant = "button1";
+  export let disabled = false;
 
   /**
    * Optional click handler
@@ -20,17 +22,23 @@
 {#if href}
   <a
     class={`button ${theme}`}
+    class:disabled
     {href}
     target={newTab ? "_blank" : null}
     rel="noopener noreferrer"
   >
-    <Typography component="span" uppercase variant="button1">
+    <Typography component="span" {variant}>
       {label}
     </Typography>
   </a>
 {:else}
-  <button class={`button ${theme}`} on:click={onClick}>
-    <Typography component="span" uppercase variant="button1">
+  <button
+    class={`button ${theme}`}
+    class:disabled
+    on:click={onClick}
+    {disabled}
+  >
+    <Typography component="span" {variant}>
       {label}
     </Typography>
   </button>
@@ -38,11 +46,26 @@
 
 <style>
   .button {
-    @apply inline-block py-[15px] px-[30px] transition duration-200 rounded-full;
+    @apply uppercase text-[13px] tracking-[1.56px] inline-block py-2 px-6 border transition duration-200 rounded-[20px];
+
+    &.disabled {
+      @apply pointer-events-none;
+    }
   }
 
   .primary {
-    @apply bg-white text-black border border-on-surface;
-    @apply hover:bg-on-surface hover:text-black;
+    @apply bg-inverse-surface text-surface border-inverse-surface hover:bg-transparent hover:text-inverse-surface;
+
+    &.disabled {
+      @apply bg-on-surface/30 border-transparent;
+    }
+  }
+
+  .secondary {
+    @apply bg-transparent border-inverse-surface hover:bg-inverse-surface hover:text-white;
+
+    &.disabled {
+      @apply border-on-surface/30 text-on-surface/30;
+    }
   }
 </style>
