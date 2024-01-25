@@ -150,6 +150,55 @@ export type DocumentSorting = {
   _updatedAt?: InputMaybe<SortOrder>;
 };
 
+export type Evening = Document & {
+  __typename?: "Evening";
+  /** Date the document was created */
+  _createdAt?: Maybe<Scalars["DateTime"]["output"]>;
+  /** Document ID */
+  _id?: Maybe<Scalars["ID"]["output"]>;
+  _key?: Maybe<Scalars["String"]["output"]>;
+  /** Current document revision */
+  _rev?: Maybe<Scalars["String"]["output"]>;
+  /** Document type */
+  _type?: Maybe<Scalars["String"]["output"]>;
+  /** Date the document was last modified */
+  _updatedAt?: Maybe<Scalars["DateTime"]["output"]>;
+  heroImage?: Maybe<Image>;
+  sections?: Maybe<Array<Maybe<Section>>>;
+  seo?: Maybe<Seo>;
+  slug?: Maybe<Slug>;
+  /** Only used to generate the slug. */
+  title?: Maybe<Scalars["String"]["output"]>;
+};
+
+export type EveningFilter = {
+  /** Apply filters on document level */
+  _?: InputMaybe<Sanity_DocumentFilter>;
+  _createdAt?: InputMaybe<DatetimeFilter>;
+  _id?: InputMaybe<IdFilter>;
+  _key?: InputMaybe<StringFilter>;
+  _rev?: InputMaybe<StringFilter>;
+  _type?: InputMaybe<StringFilter>;
+  _updatedAt?: InputMaybe<DatetimeFilter>;
+  heroImage?: InputMaybe<ImageFilter>;
+  seo?: InputMaybe<SeoFilter>;
+  slug?: InputMaybe<SlugFilter>;
+  title?: InputMaybe<StringFilter>;
+};
+
+export type EveningSorting = {
+  _createdAt?: InputMaybe<SortOrder>;
+  _id?: InputMaybe<SortOrder>;
+  _key?: InputMaybe<SortOrder>;
+  _rev?: InputMaybe<SortOrder>;
+  _type?: InputMaybe<SortOrder>;
+  _updatedAt?: InputMaybe<SortOrder>;
+  heroImage?: InputMaybe<ImageSorting>;
+  seo?: InputMaybe<SeoSorting>;
+  slug?: InputMaybe<SlugSorting>;
+  title?: InputMaybe<SortOrder>;
+};
+
 export type File = {
   __typename?: "File";
   _key?: Maybe<Scalars["String"]["output"]>;
@@ -314,16 +363,22 @@ export type IntFilter = {
 export type RootQuery = {
   __typename?: "RootQuery";
   Document?: Maybe<Document>;
+  Evening?: Maybe<Evening>;
   Home?: Maybe<Home>;
   SanityFileAsset?: Maybe<SanityFileAsset>;
   SanityImageAsset?: Maybe<SanityImageAsset>;
   allDocument: Array<Document>;
+  allEvening: Array<Evening>;
   allHome: Array<Home>;
   allSanityFileAsset: Array<SanityFileAsset>;
   allSanityImageAsset: Array<SanityImageAsset>;
 };
 
 export type RootQueryDocumentArgs = {
+  id: Scalars["ID"]["input"];
+};
+
+export type RootQueryEveningArgs = {
   id: Scalars["ID"]["input"];
 };
 
@@ -344,6 +399,13 @@ export type RootQueryAllDocumentArgs = {
   offset?: InputMaybe<Scalars["Int"]["input"]>;
   sort?: InputMaybe<Array<DocumentSorting>>;
   where?: InputMaybe<DocumentFilter>;
+};
+
+export type RootQueryAllEveningArgs = {
+  limit?: InputMaybe<Scalars["Int"]["input"]>;
+  offset?: InputMaybe<Scalars["Int"]["input"]>;
+  sort?: InputMaybe<Array<EveningSorting>>;
+  where?: InputMaybe<EveningFilter>;
 };
 
 export type RootQueryAllHomeArgs = {

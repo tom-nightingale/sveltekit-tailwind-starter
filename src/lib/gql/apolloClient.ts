@@ -41,7 +41,7 @@ const ssrOptions = {
     errorPolicy: "ignore",
   },
   query: {
-    fetchPolicy: "cache-and-network",
+    fetchPolicy: "network-only",
     errorPolicy: "all",
   },
 };

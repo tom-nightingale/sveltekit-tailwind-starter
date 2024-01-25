@@ -3,7 +3,8 @@
   import { SeoData } from "$lib/data/SeoData";
   import Seo from "$lib/components/Seo/Seo.svelte";
 
-  // export let data: PageData;
+  export let data: PageData;
+  console.log("data", { data });
 </script>
 
 <Seo seo={SeoData} />
