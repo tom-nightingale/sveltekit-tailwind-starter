@@ -9,6 +9,52 @@
   export let lineThrough = false;
 </script>
 
+<style>
+  .title1 {
+    @apply text-6xl;
+  }
+
+  .title2 {
+    @apply text-5xl;
+  }
+
+  .headline1,
+  .h1 {
+    @apply text-4xl;
+  }
+
+  .headline2,
+  .h2 {
+    @apply text-3xl;
+  }
+
+  .headline3,
+  .h3 {
+    @apply text-2xl;
+  }
+
+  .headline4,
+  .h4 {
+    @apply text-xl;
+  }
+
+  .headline5,
+  .h5 {
+    @apply text-lg;
+  }
+
+  .body1 {
+  }
+
+  .button1 {
+    @apply font-sans;
+  }
+
+  .bold {
+    @apply font-bold;
+  }
+</style>
+
 {#if component === "h1"}
   <h1
     class={`${variant} ${theme} ${lineThrough && "line-through"}`}
@@ -98,49 +144,3 @@
     <slot />
   </span>
 {/if}
-
-<style>
-  .title1 {
-    @apply text-6xl;
-  }
-
-  .title2 {
-    @apply text-5xl;
-  }
-
-  .headline1,
-  .h1 {
-    @apply text-4xl;
-  }
-
-  .headline2,
-  .h2 {
-    @apply text-3xl;
-  }
-
-  .headline3,
-  .h3 {
-    @apply text-2xl;
-  }
-
-  .headline4,
-  .h4 {
-    @apply text-xl;
-  }
-
-  .headline5,
-  .h5 {
-    @apply text-lg;
-  }
-
-  .body1 {
-  }
-
-  .button1 {
-    @apply font-sans;
-  }
-
-  .bold {
-    @apply font-bold;
-  }
-</style>

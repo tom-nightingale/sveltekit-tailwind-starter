@@ -19,6 +19,34 @@
   }
 </script>
 
+<style>
+  .button {
+    @apply uppercase text-[13px] tracking-[1.56px] inline-block py-2 px-6 border transition duration-200 rounded-[20px];
+
+    &.disabled {
+      @apply pointer-events-none;
+    }
+  }
+
+  .primary {
+    @apply bg-inverse-surface text-surface border-inverse-surface;
+    @apply hover:bg-transparent hover:text-inverse-surface;
+
+    &.disabled {
+      @apply bg-on-surface/30 border-transparent;
+    }
+  }
+
+  .secondary {
+    @apply bg-transparent border-inverse-surface 
+    @apply hover:bg-inverse-surface hover:text-white;
+
+    &.disabled {
+      @apply border-on-surface/30 text-on-surface/30;
+    }
+  }
+</style>
+
 {#if href}
   <a
     class={`button ${theme}`}
@@ -44,28 +72,3 @@
   </button>
 {/if}
 
-<style>
-  .button {
-    @apply uppercase text-[13px] tracking-[1.56px] inline-block py-2 px-6 border transition duration-200 rounded-[20px];
-
-    &.disabled {
-      @apply pointer-events-none;
-    }
-  }
-
-  .primary {
-    @apply bg-inverse-surface text-surface border-inverse-surface hover:bg-transparent hover:text-inverse-surface;
-
-    &.disabled {
-      @apply bg-on-surface/30 border-transparent;
-    }
-  }
-
-  .secondary {
-    @apply bg-transparent border-inverse-surface hover:bg-inverse-surface hover:text-white;
-
-    &.disabled {
-      @apply border-on-surface/30 text-on-surface/30;
-    }
-  }
-</style>
